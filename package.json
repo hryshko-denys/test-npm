@@ -1,0 +1,35 @@
+{
+  "name": "test-npm-esol",
+  "version": "1.0.0",
+  "description": "TEST NPM Package to deposit to ESOL",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hryshko-denys/test-npm.git"
+  },
+  "keywords": ["Solana"],
+  "author": "D-H",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hryshko-denys/test-npm/issues"
+  },
+  "homepage": "https://github.com/hryshko-denys/test-npm#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.4"
+  },
+  "files": ["lib/**/*"]
+}
