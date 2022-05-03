@@ -12,13 +12,15 @@
     "prepare": "npm run build",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push origin master && git push origin master --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hryshko-denys/test-npm.git"
   },
-  "keywords": ["Solana"],
+  "keywords": [
+    "Solana"
+  ],
   "author": "D-H",
   "license": "ISC",
   "bugs": {
@@ -26,10 +28,18 @@
   },
   "homepage": "https://github.com/hryshko-denys/test-npm#readme",
   "devDependencies": {
+    "@project-serum/borsh": "^0.2.5",
+    "@solana/buffer-layout": "^3.0.0",
+    "@solana/spl-token": "^0.1.8",
+    "@solana/web3.js": "^1.41.3",
+    "@types/bn.js": "^5.1.0",
+    "bn.js": "^5.2.0",
     "prettier": "^2.6.2",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.6.4"
   },
-  "files": ["lib/**/*"]
+  "files": [
+    "lib/**/*"
+  ]
 }
